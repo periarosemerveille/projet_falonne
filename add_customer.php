@@ -6,7 +6,7 @@
   $groups = find_all('user_groups');
 ?>
 <?php
-  if(isset($_POST['add_user'])){
+  if(isset($_POST['add_customer'])){
 
    $req_fields = array('full-name','username','password','level' );
    validate_fields($req_fields);
@@ -25,15 +25,15 @@
         if($db->query($query)){
           //sucess
           $session->msg('s',"User account has been creted! ");
-          redirect('add_user.php', false);
+          redirect('add_customer.php', false);
         } else {
           //failed
           $session->msg('d',' Sorry failed to create account!');
-          redirect('add_user.php', false);
+          redirect('add_customer.php', false);
         }
    } else {
      $session->msg("d", $errors);
-      redirect('add_user.php',false);
+      redirect('add_customer.php',false);
    }
  }
 ?>
@@ -49,7 +49,7 @@
       </div>
       <div class="panel-body">
         <div class="col-md-6">
-          <form method="post" action="add_user.php">
+          <form method="post" action="add_customer.php">
             <div class="form-group">
                 <label for="name">Nom</label>
                 <input type="text" class="form-control" name="full-name" placeholder="Nom">
@@ -71,7 +71,7 @@
                 </select>
             </div>
             <div class="form-group clearfix">
-              <button type="submit" name="add_user" class="btn btn-primary">Ajouter un utilisateur</button>
+              <button type="submit" name="add_customer" class="btn btn-primary">Ajouter un utilisateur</button>
             </div>
         </form>
         </div>

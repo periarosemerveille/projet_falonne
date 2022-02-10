@@ -56,7 +56,7 @@
         <div class="panel-heading">
           <strong>
             <span class="glyphicon glyphicon-th"></span>
-            <span>Add New Product</span>
+            <span>Ajouter un nouveau produit</span>
          </strong>
         </div>
         <div class="panel-body">
@@ -67,26 +67,17 @@
                   <span class="input-group-addon">
                    <i class="glyphicon glyphicon-th-large"></i>
                   </span>
-                  <input type="text" class="form-control" name="product-title" placeholder="Product Title">
+                  <input type="text" class="form-control" name="product-title" placeholder="Nom Produit">
                </div>
               </div>
               <div class="form-group">
                 <div class="row">
                   <div class="col-md-6">
                     <select class="form-control" name="product-categorie">
-                      <option value="">Select Product Category</option>
+                      <option value="">sélectionner la catégorie de produit</option>
                     <?php  foreach ($all_categories as $cat): ?>
                       <option value="<?php echo (int)$cat['id'] ?>">
                         <?php echo $cat['name'] ?></option>
-                    <?php endforeach; ?>
-                    </select>
-                  </div>
-                  <div class="col-md-6">
-                    <select class="form-control" name="product-photo">
-                      <option value="">Select Product Photo</option>
-                    <?php  foreach ($all_photo as $photo): ?>
-                      <option value="<?php echo (int)$photo['id'] ?>">
-                        <?php echo $photo['file_name'] ?></option>
                     <?php endforeach; ?>
                     </select>
                   </div>
@@ -100,7 +91,7 @@
                      <span class="input-group-addon">
                       <i class="glyphicon glyphicon-shopping-cart"></i>
                      </span>
-                     <input type="number" class="form-control" name="product-quantity" placeholder="Product Quantity">
+                     <input type="number" class="form-control" name="product-quantity" placeholder="Quantité">
                   </div>
                  </div>
                  <div class="col-md-4">
@@ -108,7 +99,7 @@
                      <span class="input-group-addon">
                        <i class="glyphicon glyphicon-usd"></i>
                      </span>
-                     <input type="number" class="form-control" name="buying-price" placeholder="Buying Price">
+                     <input type="number" class="form-control" name="buying-price" placeholder="Prix d'achat">
                      <span class="input-group-addon">.00</span>
                   </div>
                  </div>
@@ -117,13 +108,13 @@
                       <span class="input-group-addon">
                         <i class="glyphicon glyphicon-usd"></i>
                       </span>
-                      <input type="number" class="form-control" name="saleing-price" placeholder="Selling Price">
+                      <input type="number" class="form-control" name="saleing-price" placeholder="Prix de vente">
                       <span class="input-group-addon">.00</span>
                    </div>
                   </div>
                </div>
               </div>
-              <button type="submit" name="add_product" class="btn btn-danger">Add product</button>
+              <button type="submit" name="add_product" class="btn btn-danger">Ajouter</button>
           </form>
          </div>
         </div>

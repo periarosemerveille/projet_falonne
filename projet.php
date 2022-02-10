@@ -14,7 +14,7 @@
       <div class="panel panel-default">
         <div class="panel-heading clearfix">
          <div class="pull-right">
-           <a href="add_product.php" class="btn btn-primary">Ajouter</a>
+           <a href="add_product.php" class="btn btn-primary">Add New</a>
          </div>
         </div>
         <div class="panel-body">
@@ -22,12 +22,17 @@
             <thead>
               <tr>
                 <th class="text-center" style="width: 50px;">#</th>
-                <th> Nom Produit </th>
-                <th class="text-center" style="width: 10%;"> Catégories </th>
-                <th class="text-center" style="width: 10%;"> Stock actuel </th>
-                <th class="text-center" style="width: 10%;"> Prix d'achat </th>
-                <th class="text-center" style="width: 10%;"> Prix de vente </th>
-                <th class="text-center" style="width: 10%;"> Projet ajouté </th>
+                <th> nom_client</th>
+                <th> nom_projet </th>
+                <th class="text-center" style="width: 10%;"> In-Stock </th>
+                <th class="text-center" style="width: 10%;"> Budget </th>
+                <th class="text-center" style="width: 10%;"> delai_payement </th>
+                <th class="text-center" style="width: 10%;"> marge beneficiare </th>
+                <th class="text-center" style="width: 10%;"> marge beneficiare </th>
+
+                <th class="text-center" style="width: 10%;"> date debut </th>
+                <th class="text-center" style="width: 10%;"> date fin  </th>
+
                 <th class="text-center" style="width: 100px;"> Actions </th>
               </tr>
             </thead>
@@ -35,13 +40,17 @@
               <?php foreach ($products as $product):?>
               <tr>
                 <td class="text-center"><?php echo count_id();?></td>
-                
+    
                 <td> <?php echo remove_junk($product['name']); ?></td>
                 <td class="text-center"> <?php echo remove_junk($product['categorie']); ?></td>
                 <td class="text-center"> <?php echo remove_junk($product['quantity']); ?></td>
                 <td class="text-center"> <?php echo remove_junk($product['buy_price']); ?></td>
+                <td class="text-center"> <?php echo read_date($product['date']); ?></td>
+                <td class="text-center"> <?php echo remove_junk($product['sale_price']); ?></td>
                 <td class="text-center"> <?php echo remove_junk($product['sale_price']); ?></td>
                 <td class="text-center"> <?php echo read_date($product['date']); ?></td>
+                <td class="text-center"> <?php echo read_date($product['date']); ?></td>
+
                 <td class="text-center">
                   <div class="btn-group">
                     <a href="edit_product.php?id=<?php echo (int)$product['id'];?>" class="btn btn-info btn-xs"  title="Edit" data-toggle="tooltip">

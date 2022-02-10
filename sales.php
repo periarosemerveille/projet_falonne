@@ -19,10 +19,10 @@ $sales = find_all_sale();
         <div class="panel-heading clearfix">
           <strong>
             <span class="glyphicon glyphicon-th"></span>
-            <span>All Sales</span>
+            <span>Ventes</span>
           </strong>
           <div class="pull-right">
-            <a href="add_sale.php" class="btn btn-primary">Add sale</a>
+            <a href="add_sale.php" class="btn btn-primary">Recherche Produit</a>
           </div>
         </div>
         <div class="panel-body">
@@ -30,8 +30,8 @@ $sales = find_all_sale();
             <thead>
               <tr>
                 <th class="text-center" style="width: 50px;">#</th>
-                <th> Product name </th>
-                <th class="text-center" style="width: 15%;"> Quantity</th>
+                <th> Nom produit </th>
+                <th class="text-center" style="width: 15%;"> Quantité</th>
                 <th class="text-center" style="width: 15%;"> Total </th>
                 <th class="text-center" style="width: 15%;"> Date </th>
                 <th class="text-center" style="width: 100px;"> Actions </th>

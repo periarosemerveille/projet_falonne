@@ -45,9 +45,9 @@
         <div class="form-group">
           <div class="input-group">
             <span class="input-group-btn">
-              <button type="submit" class="btn btn-primary">Find It</button>
+              <button type="submit" class="btn btn-primary">Recherche</button>
             </span>
-            <input type="text" id="sug_input" class="form-control" name="title"  placeholder="Search for product name">
+            <input type="text" id="sug_input" class="form-control" name="title"  placeholder="recherche du produit">
          </div>
          <div id="result" class="list-group"></div>
         </div>
@@ -61,7 +61,7 @@
       <div class="panel-heading clearfix">
         <strong>
           <span class="glyphicon glyphicon-th"></span>
-          <span>Sale Eidt</span>
+          <span>Ventes</span>
        </strong>
       </div>
       <div class="panel-body">
@@ -69,8 +69,8 @@
          <table class="table table-bordered">
            <thead>
             <th> Item </th>
-            <th> Price </th>
-            <th> Qty </th>
+            <th> Prix </th>
+            <th> Quatité </th>
             <th> Total </th>
             <th> Date</th>
             <th> Action</th>
