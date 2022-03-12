@@ -33,7 +33,7 @@
             <th>Prénom</th>
             <th>Email</th>
             <th>Adresse</th>
-            <th>CNI/NIU</th>
+            <th>CNI</th>
             <th>Numéro</th>
             <th>Ville</th>
             <th class="text-center" style="width: 100px;">Actions</th>
@@ -43,12 +43,13 @@
         <?php foreach($all_users as $a_user): ?>
           <tr>
            <td class="text-center"><?php echo count_id();?></td>
-           <td><?php echo remove_junk(ucwords($a_user['name']))?></td>
-           <td><?php echo remove_junk(ucwords($a_user['username']))?></td>
+           <td><?php echo remove_junk(ucwords($a_user['nom']))?></td>
+           <td><?php echo remove_junk(ucwords($a_user['prenom']))?></td>
            <td><?php echo remove_junk(ucwords($a_user['email']))?></td>
-           <td><?php echo remove_junk(ucwords($a_user['username']))?></td>
-           <td><?php echo remove_junk(ucwords($a_user['username']))?></td>
-           <td><?php echo remove_junk(ucwords($a_user['username']))?></td>
+           <td><?php echo remove_junk(ucwords($a_user['adresse']))?></td>
+           <td><?php echo remove_junk(ucwords($a_user['cni']))?></td>
+           <td><?php echo remove_junk(ucwords($a_user['numero']))?></td>
+           <td><?php echo remove_junk(ucwords($a_user['ville']))?></td>
            <td class="text-center"><?php echo remove_junk(ucwords($a_user['group_name']))?></td>
            <td class="text-center">
              <div class="btn-group">
